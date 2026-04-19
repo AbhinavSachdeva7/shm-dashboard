@@ -1,6 +1,8 @@
-# SHM Dashboard Backend
+# SHM Dashboard
 
-FastAPI backend for the Structural Health Monitoring dashboard. Connects to ThingSpeak for IoT sensor data, stores historical readings in PostgreSQL, and exposes a REST API for the admin and portal frontends.
+FastAPI backend for the Structural Health Monitoring dashboard. Connects to ThingSpeak for IoT sensor data, stores historical readings in PostgreSQL, and exposes a REST API for the admin and portal frontends. 
+
+This backend was made as a project in 3 differnt stacks python, java, express. The python backend is uploaded here as proof of work. The video for the backend and the system design is available at my linkedin  https://www.linkedin.com/in/sachdeva-abhinav/
 
 ## Features
 
