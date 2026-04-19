@@ -1,0 +1,31 @@
+# FastAPI and server
+fastapi==0.109.2
+uvicorn[standard]==0.27.1
+python-multipart==0.0.9
+
+# Database
+sqlalchemy[asyncio]==2.0.25
+asyncpg==0.29.0
+alembic==1.13.1
+psycopg2-binary==2.9.9
+
+# Validation and settings
+pydantic==2.6.1
+pydantic-settings==2.1.0
+
+# HTTP client for ThingSpeak
+httpx==0.26.0
+
+# Scheduler for background jobs
+apscheduler==3.10.4
+
+# Security
+passlib[bcrypt]==1.7.4
+python-jose[cryptography]==3.3.0
+
+# CORS
+starlette==0.36.3
+
+# Utilities
+python-dotenv==1.0.1
+
