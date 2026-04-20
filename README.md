@@ -58,6 +58,20 @@ This backend was made as a project in 3 differnt stacks python, java, express. T
 
 The API will be available at `http://localhost:8000`
 
+
+## Using Docker
+1. Download Docker Desktop
+
+2. Run the command:
+```bash
+docker-compose up --build
+```
+
+3. Once built you can use the following command to start it
+```bash
+docker-compose up 
+```
+
 ### API Documentation
 
 Once running, visit:
