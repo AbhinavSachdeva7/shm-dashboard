@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Syne", sans-serif;
+  --font-sans: "DM Sans", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+:root {
+  --bg:        #080808;
+  --surface:   #0E0E0E;
+  --surface-2: #141414;
+  --border:    #1E1E1E;
+  --border-2:  #2A2A2A;
+  --text:      #F0EDE8;
+  --text-muted:#6B6B6B;
+  --accent:    #FF6B2B;
+  --normal:    #22C55E;
+  --warning:   #F59E0B;
+  --critical:  #EF4444;
+  --unknown:   #6B6B6B;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 10;
+  opacity: 0.4;
+}
+
+@keyframes pulse-dot {
+  0%, 80%, 100% { opacity: 0.2; transform: scale(0.8); }
+  40%           { opacity: 1;   transform: scale(1); }
+}
+
+.loading-dots span {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse-dot 1.2s ease-in-out infinite;
+}
+.loading-dots span:nth-child(2) { animation-delay: 0.2s; }
+.loading-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.4s ease forwards;
+}
+
+.animate-fade-up-delay-1 { animation: fade-up 0.4s ease 0.05s forwards; opacity: 0; }
+.animate-fade-up-delay-2 { animation: fade-up 0.4s ease 0.10s forwards; opacity: 0; }
+.animate-fade-up-delay-3 { animation: fade-up 0.4s ease 0.15s forwards; opacity: 0; }
+.animate-fade-up-delay-4 { animation: fade-up 0.4s ease 0.20s forwards; opacity: 0; }
+.animate-fade-up-delay-5 { animation: fade-up 0.4s ease 0.25s forwards; opacity: 0; }
+.animate-fade-up-delay-6 { animation: fade-up 0.4s ease 0.30s forwards; opacity: 0; }
